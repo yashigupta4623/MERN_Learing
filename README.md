@@ -57,4 +57,3 @@ To start learning the MERN stack:
 ## Conclusion
 
 Mastering the MERN stack equips you with the ability to develop complete web applications, from backend to frontend. It’s a valuable skill set for building scalable and efficient applications in today’s tech-driven world.
-
