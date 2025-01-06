@@ -1,0 +1,325 @@
+### HTML Elements Overview  
+
+#### **What is an HTML Tag?**  
+An **HTML tag** is a code snippet enclosed in angle brackets (`< >`) that defines the start or end of an element. Tags are used to structure and present content on a webpage.  
+- **Opening Tag**: `<tagname>` (e.g., `<p>`)  
+- **Closing Tag**: `</tagname>` (e.g., `</p>`)  
+- **Self-Closing Tag**: `<tagname />` (e.g., `<br>`)
+
+### Types of HTML Tags  
+
+#### 1. **Semantics Tags**  
+Define the meaning of content:  
+- **Headings**: `<h1>` to `<h6>`  
+- **Text**: `<p>` (paragraph), `<a>` (link)  
+- **Lists**: `<ul>` (unordered), `<ol>` (ordered)  
+- **Tables**: `<table>`, `<tr>`, `<td>`  
+- **Forms**: `<form>`, `<input>`  
+- **Images**: `<img>`
+- **Anchor**: `<a>`
+
+#### 2. **Structure Tags**  
+Organize webpage layout:  
+- **Core**: `<html>`, `<head>`, `<body>`  
+- **Sections**: `<header>`, `<main>`, `<aside>`, `<footer>`  
+- **Content**: `<article>`, `<section>`  
+- **Navigation**: `<nav>`
+
+#### 3. **Formatting Tags**  
+Style or format text:  
+- **Text Style**: `<b>` (bold), `<i>` (italic), `<u>` (underline), `<s>` (strikethrough)  
+- **Emphasis**: `<strong>` (important), `<em>` (emphasized)  
+- **Position**: `<sup>` (superscript), `<sub>` (subscript)  
+- **Special Text**: `<pre>` (preformatted), `<code>` (code snippets)
+
+#### **Self-Closing Tag Example**  
+Tags that don’t require a closing counterpart, such as `<br>`:  
+```html
+<p>This is line one.<br>This is line two.</p>
+```
+
+### Key Points  
+- **Nested Tags**: Tags can be nested but must be properly closed in the correct order.  
+  Example: `<div><p>Text</p></div>`  
+- **Attributes**: Tags often have attributes like `href`, `src`, or `alt` to provide additional information.  
+  Example: `<img src="image.jpg" alt="A sample image">`
+
+--- 
+### Tags vs. Elements in HTML  
+
+#### **Tag**  
+A **tag** is the basic building block of HTML and is enclosed in angle brackets (`< >`). It is used to define the start and end of an HTML element.  
+Example:  
+- `<html>` (opening tag)  
+- `</html>` (closing tag)  
+
+#### **Element**  
+An **element** refers to the combination of the opening tag, its content, and the closing tag (if applicable). It represents the entire structure and content.  
+Example:  
+```html
+<p>Hey, this is me.</p>
+```
+- **`<p>`**: Opening tag  
+- **`Hey, this is me.`**: Content  
+- **`</p>`**: Closing tag  
+
+In this case, `<p>Hey, this is me.</p>` is the **element**, while `<p>` and `</p>` are the tags.  
+
+### Key Difference:  
+- A **tag** is just the syntax used to mark the start and/or end of an element.  
+- An **element** includes the tag(s) *and* the content within.  
+
+--- 
+
+### Difference Between `<article>` and `<section>` Tags  
+
+Both `<article>` and `<section>` are semantic HTML tags used for organizing content, but they serve distinct purposes.  
+
+---
+
+#### **1. `<article>` Tag**
+The `<article>` tag is used to represent **self-contained content** that can stand alone and be distributed independently.  
+- **Purpose**: For standalone pieces of content like blog posts, news articles, user comments, or any independent content block.  
+- **Use Case Examples**:  
+  - Blog post  
+  - News article  
+  - Forum post  
+  - Product description  
+
+**Example:**  
+```html
+<article>
+    <h2>Top 10 Travel Destinations</h2>
+    <p>This article explores the most beautiful travel destinations around the world.</p>
+</article>
+```
+- **Key Characteristic**: Content inside `<article>` is meaningful even if removed from the rest of the page.
+
+---
+
+#### **2. `<section>` Tag**
+The `<section>` tag is used to define **thematic groupings** of related content. It typically groups content within a page, often with a heading, that fits together under a specific theme.  
+- **Purpose**: For grouping related content under a theme or topic.  
+- **Use Case Examples**:  
+  - Sections of a document like a chapter or subsection  
+  - Grouping multiple `<article>` elements under a category  
+  - Breaking content into logical sections  
+
+**Example:**  
+```html
+<section>
+    <h2>Features of Our Product</h2>
+    <p>Feature 1: User-friendly interface.</p>
+    <p>Feature 2: 24/7 customer support.</p>
+</section>
+```
+- **Key Characteristic**: Content inside `<section>` is not standalone and depends on the context of the surrounding content.
+
+---
+
+### **Key Differences**  
+| **Aspect**           | **`<article>`**                              | **`<section>`**                             |
+|-----------------------|----------------------------------------------|---------------------------------------------|
+| **Purpose**           | Represents standalone, independent content. | Groups related content under a common theme. |
+| **Self-Contained**    | Content can stand alone.                     | Content relies on the surrounding context.   |
+| **Common Use Cases**  | Blog posts, news articles, user comments.    | Chapters, subsections, or thematic groupings. |
+| **Heading Requirement** | Optional (but usually included).            | Recommended to include a heading.            |
+
+By understanding their differences, you can use `<article>` for independent pieces of content and `<section>` for grouping related content into meaningful divisions.
+
+---
+
+### **Note on `<aside>` Tag**  
+The `<aside>` tag represents **secondary content** related to the main content, often used for sidebars, ads, related links, or extra information. It helps provide **contextual or supplementary details** without interrupting the main flow.
+
+#### **Example:**
+```html
+<aside>
+    <h2>Related Links</h2>
+    <ul>
+        <li><a href="#">Helpful Resource 1</a></li>
+        <li><a href="#">Helpful Resource 2</a></li>
+    </ul>
+</aside>
+```  
+**Use**: Adds auxiliary content like tips, notes, or related resources.
+
+---
+Use emmet for shortcut information. for eg., p{this is a paragraph}, article+section, ul>li*3
+
+---
+
+### **Class vs. ID in HTML**
+
+In HTML, **class** and **id** are attributes used to apply styling and interact with specific elements using CSS or JavaScript. They help in identifying and grouping elements on a webpage.
+
+---
+
+#### **Class**
+- Used to apply the **same style** or functionality to **multiple elements**.  
+- Syntax: `class="className"`  
+- Can assign **multiple classes** to a single element.  
+
+**Example:**
+```html
+<p class="highlight">This text is highlighted.</p>
+<p class="highlight">This is another highlighted text.</p>
+```
+**CSS:**
+```css
+.highlight {
+    background-color: yellow;
+}
+```
+
+---
+
+#### **ID**
+- Used to uniquely identify a **single element** on the page.  
+- Syntax: `id="uniqueID"`  
+- Each `id` must be **unique** within a document. 
+- Shortcut: p#id1 -> <p id =" 
+
+**Example:**
+```html
+<p id="main-heading">This is the main heading.</p>
+```
+**CSS:**
+```css
+#main-heading {
+    color: blue;
+}
+```
+
+### **Key Differences**
+
+| **Aspect**          | **Class**                          | **ID**                               |
+|---------------------|-------------------------------------|-------------------------------------|
+| **Scope**           | Can be applied to multiple elements | Applied to a single, unique element.|
+| **CSS Selector**    | `.className` (dot prefix)           | `#idName` (hash prefix)             |
+| **Uniqueness**      | Reusable across multiple elements.  | Must be unique in the document.     |
+| **Use Case**        | Grouping elements for shared styling. | Targeting specific elements.      |
+
+**Tip:** Use `class` for reusable styles and `id` for uniquely identifying elements.
+
+---
+
+### **Short Note on `<div>`, Block & Inline Elements**
+
+#### **`<div>` Tag**  
+- A **block-level** container used to group elements for styling or layout.  
+- Generic with no semantic meaning, commonly used with CSS or JavaScript.  
+- Example:  
+  ```html
+  <div class="box">
+      <p>Content inside a div.</p>
+  </div>
+  ```
+
+#### **Block Elements**  
+- Start on a **new line** and take up the full width of the container.  
+- Can contain both block and inline elements.  
+- Examples: `<div>`, `<p>`, `<h1>`, `<section>`.  
+
+#### **Inline Elements**  
+- Stay in the **same line** as other content and take only as much space as needed.  
+- Can contain only other inline elements or text.  
+- Examples: `<span>`, `<a>`, `<strong>`, `<img>`.  
+
+#### **Key Difference**  
+- **Block**: Full-width, new line. Example: `<p>`.  
+- **Inline**: Flows with content. Example: `<a>`.  
+
+---
+
+### **How to Create a Bookmark in HTML**
+
+Bookmarks in HTML allow users to jump to specific sections of a webpage using **anchor links**. This is achieved with the `id` attribute and `<a>` tag.
+
+---
+
+#### **Steps to Create a Bookmark:**
+
+1. **Assign an `id` to the target element.**  
+   Use the `id` attribute to name the section you want to link to.  
+   Example:  
+   ```html
+   <h2 id="section1">Section 1</h2>
+   <p>This is the content of Section 1.</p>
+   ```
+
+2. **Create a hyperlink to the bookmark.**  
+   Use the `<a>` tag with the `href` attribute set to `#idName` (where `idName` matches the target element's `id`).  
+   Example:  
+   ```html
+   <a href="#section1">Go to Section 1</a>
+   ```
+
+---
+
+#### **Full Example:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Bookmark Example</title>
+</head>
+<body>
+    <h1>Bookmark Example</h1>
+    <a href="#section1">Jump to Section 1</a>
+    <a href="#section2">Jump to Section 2</a>
+
+    <h2 id="section1">Section 1</h2>
+    <p>This is the first section.</p>
+
+    <h2 id="section2">Section 2</h2>
+    <p>This is the second section.</p>
+
+    <a href="#top">Back to Top</a>
+</body>
+</html>
+```
+
+---
+
+### **Explanation:**
+1. **`id` Attribute**: Identifies the section to jump to.  
+2. **`href="#idName"`**: Links to the section using the `id`.  
+3. **Back to Top**: Use an `id` on the top element (e.g., `<h1 id="top">`) to allow navigation back.  
+
+This creates smooth navigation within the same webpage.
+
+---
+
+### **Short Note on HTML Tables**
+
+HTML tables are used to organize data in rows and columns. The `<table>` tag defines the table structure.
+
+---
+
+#### **Key Table Tags:**
+1. **`<table>`**: Defines the table.  
+2. **`<thead>`**: Groups the header row(s) of the table.  
+3. **`<tbody>`**: Groups the body/content rows of the table.  
+4. **`<tr>`**: Represents a table row.  
+5. **`<td>`**: Defines a table cell (data).  
+6. **`<th>`**: Defines a header cell (usually bold and centered).
+
+---
+
+#### **Attributes for Table Cells:**
+1. **`colspan`**: Merges multiple columns into one cell.  
+   Example:  
+   ```html
+   <td colspan="2">Merged Column</td>
+   ```
+2. **`rowspan`**: Merges multiple rows into one cell.  
+   Example:  
+   ```html
+   <td rowspan="2">Merged Row</td>
+   ```
+
+---
+

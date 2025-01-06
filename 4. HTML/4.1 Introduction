@@ -1,0 +1,59 @@
+**HTML (HyperText Markup Language)** is the backbone of every webpage. It defines the structure of web content using a system of elements represented by tags.
+
+A **basic HTML boilerplate** looks like this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+    <p>This is a simple HTML document.</p>
+    <a href="https://www.example.com">Click here to visit Example</a>
+</body>
+</html>
+```
+
+### Key Elements in the Boilerplate:
+
+1. **`<!DOCTYPE html>`**  
+   Declares the document type as HTML5. It ensures the browser interprets the document correctly.
+
+2. **`<html lang="en">`**  
+   The root element of the HTML document. The `lang="en"` attribute specifies the language of the content (English in this case).
+
+3. **`<head>`**  
+   Contains metadata about the webpage, such as its title, character encoding, and other settings.
+
+   - **`<meta charset="UTF-8">`**  
+     Specifies the character encoding as UTF-8, which supports most characters used worldwide.
+     
+   - **`<meta name="viewport" content="width=device-width, initial-scale=1.0">`**  
+     Makes the webpage responsive by ensuring it scales properly on all devices, especially mobile.
+
+   - **`<title>`**  
+     Sets the title of the webpage, which appears on the browser tab.
+
+4. **`<body>`**  
+   The main content of the webpage goes here. Elements within the `<body>` are displayed in the browser.
+
+   - **`<h1>`**  
+     Defines the main heading of the page. Use headings (`<h1>` to `<h6>`) to structure content hierarchically.
+     
+   - **`<p>`**  
+     Represents a paragraph of text.
+
+   - **`<a href="URL">`**  
+     Creates a hyperlink. The `href` attribute specifies the destination URL.
+
+### Why Use This Boilerplate?
+This minimal setup ensures your webpage:
+- Works on all modern browsers.
+- Adapts to different screen sizes (responsive design).
+- Uses proper character encoding to display text correctly.
+
+From here, you can expand your webpage by adding more elements like images (`<img>`), lists (`<ul>`/`<ol>`), or div containers (`<div>`).
